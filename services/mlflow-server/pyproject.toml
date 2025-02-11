@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mlflow-server"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mlflow = {extras = ["extras"], version = "^2.20.1"}
+boto3 = "^1.36.16"
+cryptography = "^44.0.0"
+pymysql = "^1.1.1"
+psycopg2 = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
