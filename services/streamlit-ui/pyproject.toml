@@ -1,18 +1,19 @@
 [tool.poetry]
-name = "mlflow-server"
+name = "streamlit-ui"
 version = "0.1.0"
 description = ""
-authors = []
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-mlflow = {extras = ["extras"], version = "^2.20.1"}
-boto3 = "^1.36.16"
-cryptography = "^44.0.0"
-pymysql = "^1.1.1"
-psycopg2 = "^2.9.10"
+pandas = "^2.2.3"
+requests = "^2.32.3"
+streamlit = "^1.42.0"
+pydantic = "^2.10.6"
+streamlit-authenticator = "^0.4.1"
+loguru = "^0.7.3"
 
 
 [build-system]

@@ -1,0 +1,26 @@
+cookie:
+  expiry_days: 30
+  key: f?/;4-XAu*{nrTL:B`h^m(t6M@+}Y&
+  name: reauth_code
+credentials:
+  usernames:
+    aadmin:
+      email: admin@example.com
+      failed_login_attempts: 0
+      first_name: Adminero
+      last_name: Adminini
+      logged_in: true
+      password: Geh7ykc6JZNbnuTS
+      roles:
+      - admin
+      - editor
+      - viewer
+    mmustermann:
+      email: m.mustermann@example.com
+      failed_login_attempts: 0
+      first_name: Max
+      last_name: Mustermann
+      logged_in: false
+      password: NyMzvpaTnULdq95x
+      roles:
+      - viewer
