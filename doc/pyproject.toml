@@ -2,8 +2,9 @@
 name = "doc"
 version = "0.1.0"
 description = ""
-authors = ["VitaliKStud <vitali9394@yahoo.de>"]
+authors = ["VitaliKStud"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
