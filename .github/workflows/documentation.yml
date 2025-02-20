@@ -27,6 +27,9 @@ jobs:
       - name: Install Dependencies & Build Docs
         run: |
           pip install poetry
+          poetry add sphinx-copybutton
+          poetry add sphinx-rtd-theme
+          poetry add sphinx
           mkdir -p gh-pages
           touch gh-pages/.nojekyll
           cd doc/
