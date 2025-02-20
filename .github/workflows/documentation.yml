@@ -26,7 +26,6 @@ jobs:
 
       - name: Install Dependencies & Build Docs
         run: |
-          pip install poetry
           poetry self update
           mkdir -p gh-pages
           touch gh-pages/.nojekyll
