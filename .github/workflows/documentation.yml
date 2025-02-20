@@ -1,7 +1,10 @@
 name: Docs2Pages
+
 on:
   push:
     tags: '*'
+    branches:
+      - documentation-sphinx
   pull_request:
     branches:
       - master
