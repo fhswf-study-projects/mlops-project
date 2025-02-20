@@ -12,26 +12,31 @@ on:
 jobs:
   build-docs:
     runs-on: self-hosted
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-        fetch-depth: 0
-    - uses: actions/setup-python@v2
-      with:
-        python-version: 3.12
-    - name: Build documentation
-      run: |
-        pip install poetry
-        mkdir gh-pages
-        touch gh-pages/.nojekyll
-        cd doc/
-        poetry install
-        poetry run make html
-        cp -r build/* ../gh-pages/
-    - name: Deploy documentation
-      if: ${{ github.event_name == 'push' }}
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: gh-pages
-        folder: gh-pages
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install Dependencies & Build Docs
+        run: |
+          pip install poetry
+          mkdir -p gh-pages
+          touch gh-pages/.nojekyll
+          cd doc/
+          poetry install
+          poetry run make html
+          cp -r build/html/* ../gh-pages/
+
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: gh-pages
