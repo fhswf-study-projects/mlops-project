@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "doc"
+version = "0.1.0"
+description = ""
+authors = ["VitaliKStud <vitali9394@yahoo.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sphinx = "^8.2.0"
+sphinx-copybutton = "^0.5.2"
+sphinx-rtd-theme = "^3.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
