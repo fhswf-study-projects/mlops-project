@@ -12,6 +12,9 @@ on:
 jobs:
   build-docs:
     runs-on: self-hosted
+    permissions:
+      contents: read
+      packages: write
 
     steps:
       - name: Checkout Repository
@@ -38,5 +41,6 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: gh-pages
